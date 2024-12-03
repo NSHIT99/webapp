@@ -521,6 +521,7 @@ h6 {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+  justify-content: space-between;
 }
 
 .contact-title {
@@ -546,4 +547,271 @@ h6 {
   font-size: 12px;
   line-height: 24px;
   font-weight: 100;
+}
+
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.price_item {
+  background: #121214;
+}
+
+.price_item .item_cost_wrapper {
+  position: relative;
+  padding: 39px 30px 8px 30px;
+  text-align: center;
+}
+
+.price_item .item_cost_wrapper > * {
+  padding-bottom: 15px;
+}
+
+.price_content,
+.price_content > * {
+  vertical-align: top;
+}
+
+.price_item_title h6 {
+  letter-spacing: 3px;
+  color: #757579;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.price_item.standard .price_content {
+  background: linear-gradient(90deg, #fe243e 0%, #bb47fd) no-repeat center;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #bb47fd;
+}
+
+.price_item_description {
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.price_item.standard .item_cost_wrapper:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: rgba(117, 117, 117, 0.2);
+}
+
+.price_item_body {
+  padding: 32px 50px 40px 50px;
+}
+
+.price_button,
+.price_item .items_text {
+  padding-bottom: 20px;
+}
+
+.price_item .items_text ul,
+.price_item .items_text ol,
+.price_item .items_text p {
+  margin-bottom: 0;
+  padding-bottom: 7px;
+}
+.price_item .items_text ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.price_item .items_text ul li {
+  padding: 0 0 13px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.price_item .items_text ul li:before {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 15px;
+  color: #757579;
+}
+
+.price_button {
+  text-align: center;
+}
+
+.price_button .shortcode_button {
+  border-radius: 23px;
+  height: 50px;
+  padding: 14px 30px 15px 30px;
+}
+
+.price_button a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.shortcode_button {
+  height: 45px;
+  display: inline-block;
+  border: none;
+  border-radius: 22px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 12px;
+  line-height: 21px;
+  padding: 12px 32px 12px 32px;
+  color: #ffffff;
+  position: relative;
+  letter-spacing: 2.5px;
+}
+
+.price_button .shortcode_button:after,
+.price_button .shortcode_button:before {
+  border-radius: 23px;
+}
+
+.shortcode_button:before {
+  background: #bb47fd;
+  background: linear-gradient(90deg, #fe243e 0%, #bb47fd) no-repeat center;
+  background-size: 150% 150%;
+}
+
+.shortcode_button:before,
+.shortcode_button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  display: block;
+  pointer-events: none;
+}
+
+.price_button .shortcode_button:after {
+  background: #121214;
+}
+
+.shortcode_button:after {
+  transition: opacity 400ms;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+}
+
+.shortcode_button span {
+  font-family: Poppins;
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.shortcode_button span:after {
+  content: "";
+  display: inline-block;
+  background: url(./img/right_arrow.png) no-repeat 0 0;
+  background-size: 21px 9px;
+  width: 21px;
+  height: 9px;
+  margin: -2px 0 0 8px;
+  vertical-align: middle;
+}
+
+.price_content span {
+  padding: 0 2px;
+  line-height: 32px;
+  font-size: 25px;
+  margin-top: -2px;
+}
+
+.price_content span.price_value {
+  line-height: 46px;
+  font-size: 48px;
+}
+
+.elementor-repeater-item {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.price_item.most_popular .item_cost_wrapper {
+  background: #bb47fd;
+  background: linear-gradient(90deg, #fe243e 0%, #bb47fd) no-repeat center;
+  background-size: 150% 150%;
+}
+
+.price_item.most_popular .price_item_title h6,
+.price_item.most_popular .price_content,
+.price_item.most_popular .price_item_description {
+  color: #fff;
+}
+
+.price_item.most_popular .price_button .shortcode_button:after {
+  opacity: 0;
+}
+
+.price_item.most_popular .price_button .shortcode_button:hover:after {
+  opacity: 1;
+}
+
+.footer-contacts .widget_title {
+  padding-top: 8px;
+  padding-bottom: 21px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+}
+
+.grid_gallery_footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.wp-block-button {
+  width: 100%;
+}
+
+.wp-block-button__link {
+  width: 80%;
+  border-color: currentColor;
+  border-width: 2px;
+  border-style: solid;
+  color: #fff;
+  padding-top: 0.667em;
+  padding-right: 1.33em;
+  padding-bottom: 0.667em;
+  padding-left: 1.33em;
+  border-radius: 9999px;
+  box-shadow: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  word-break: break-word;
+}
+
+.wp-block-button__link:hover {
+  color: #757579;
 }
